@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.bt {
+  border: 1px solid red;
+}
+
+.center, section .heart, section .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+section {
+  width: 500px;
+  height: 500px;
+  margin: 100px auto;
+  overflow: hidden;
+  position: relative;
+}
+
+section .heart {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 150px;
+  left: 150px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: #590808;
+  -webkit-box-shadow: -6px -6px 30px #f04b4b;
+          box-shadow: -6px -6px 30px #f04b4b;
+  -webkit-animation: hbeating 1s infinite linear;
+          animation: hbeating 1s infinite linear;
+}
+
+section .heart::before, section .heart::after {
+  content: '';
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #590808;
+}
+
+section .heart::before {
+  top: -50%;
+  left: 0;
+}
+
+section .heart::after {
+  top: 0;
+  left: -50%;
+}
+
+@-webkit-keyframes hbeating {
+  0% {
+    -webkit-transform: rotate(45deg) scale(1.1);
+            transform: rotate(45deg) scale(1.1);
+  }
+  5% {
+    -webkit-transform: rotate(45deg) scale(1);
+            transform: rotate(45deg) scale(1);
+  }
+  10% {
+    -webkit-transform: rotate(45deg) scale(0.9);
+            transform: rotate(45deg) scale(0.9);
+  }
+  15% {
+    -webkit-transform: rotate(45deg) scale(1);
+            transform: rotate(45deg) scale(1);
+  }
+  30% {
+    -webkit-transform: rotate(45deg) scale(1.1);
+            transform: rotate(45deg) scale(1.1);
+  }
+  80% {
+    -webkit-transform: rotate(45deg) scale(1);
+            transform: rotate(45deg) scale(1);
+  }
+  90% {
+    -webkit-transform: rotate(45deg) scale(0.9);
+            transform: rotate(45deg) scale(0.9);
+  }
+  100% {
+    -webkit-transform: rotate(45deg) scale(0.9);
+            transform: rotate(45deg) scale(0.9);
+  }
+}
+
+@keyframes hbeating {
+  0% {
+    -webkit-transform: rotate(45deg) scale(1.1);
+            transform: rotate(45deg) scale(1.1);
+  }
+  5% {
+    -webkit-transform: rotate(45deg) scale(1);
+            transform: rotate(45deg) scale(1);
+  }
+  10% {
+    -webkit-transform: rotate(45deg) scale(0.9);
+            transform: rotate(45deg) scale(0.9);
+  }
+  15% {
+    -webkit-transform: rotate(45deg) scale(1);
+            transform: rotate(45deg) scale(1);
+  }
+  30% {
+    -webkit-transform: rotate(45deg) scale(1.1);
+            transform: rotate(45deg) scale(1.1);
+  }
+  80% {
+    -webkit-transform: rotate(45deg) scale(1);
+            transform: rotate(45deg) scale(1);
+  }
+  90% {
+    -webkit-transform: rotate(45deg) scale(0.9);
+            transform: rotate(45deg) scale(0.9);
+  }
+  100% {
+    -webkit-transform: rotate(45deg) scale(0.9);
+            transform: rotate(45deg) scale(0.9);
+  }
+}
+
+section .EKG > svg {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  display: block;
+  fill: transparent;
+  stroke-width: 5px;
+  stroke: #009970;
+  -webkit-animation: palse 1.3s linear .700ms infinite;
+          animation: palse 1.3s linear .700ms infinite;
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+  -webkit-filter: drop-shadow(0 0 17px #00e6a3);
+          filter: drop-shadow(0 0 17px #00e6a3);
+  opacity: 1;
+}
+
+@-webkit-keyframes palse {
+  to {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes palse {
+  to {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+section > .container {
+  position: absolute;
+  top: 430px;
+  left: 65px;
+  -webkit-perspective: 2000px;
+          perspective: 2000px;
+}
+
+section .flip {
+  width: 370px;
+  height: 70px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+  -webkit-transform: translateZ(-35px);
+          transform: translateZ(-35px);
+  position: relative;
+}
+
+section .flip:hover {
+  -webkit-transform: rotateX(-90deg) translateY(35px);
+          transform: rotateX(-90deg) translateY(35px);
+}
+
+section .flip > .side1 {
+  background-color: rgba(0, 0, 0, 0.848);
+  text-transform: capitalize;
+  -webkit-transform: translateZ(35px);
+          transform: translateZ(35px);
+  color: white;
+}
+
+section .flip > .side1 > .fa {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: red;
+  padding: 10px;
+  margin-left: 13px;
+  font-size: 30px;
+  color: white;
+  -webkit-box-shadow: 0 0 3px 5px rgba(255, 0, 0, 0.437);
+          box-shadow: 0 0 3px 5px rgba(255, 0, 0, 0.437);
+}
+
+section .flip > .side2 {
+  background-color: rgba(0, 0, 0, 0.848);
+  -webkit-transform: rotateX(90deg) translateZ(35px);
+          transform: rotateX(90deg) translateZ(35px);
+  color: white;
+}
+
+section .box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  font-size: 22px;
+  font-weight: bolder;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border: 3px solid white;
+}
+/*# sourceMappingURL=heart.beat.css.map */
