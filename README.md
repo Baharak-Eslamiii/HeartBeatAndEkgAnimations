@@ -58,7 +58,7 @@ This project features three interactive animations that simulate the heart beat,
 <br>
 
 <div align="center">
-   <img src="??" />
+   <img src="https://github.com/Baharak-Eslamiii/HeartBeatAndEkgAnimations/assets/152727444/d5b11fc0-c5b4-41d6-8e3c-9de22057e76e" />
 </div>
 
 
