@@ -44,7 +44,7 @@
 
 ## About the project
 
-This project features three interactive animations that simulate the heart beat, EKG readings, and a 3D flip button that plays a heartbeat sound when clicked, that uses  basic technologies. **(actually, this trick is for front-End beginners)**.
+This trick features three interactive animations that simulate the heart beat, EKG readings, and a 3D flip button that plays a heartbeat sound when clicked, that uses  basic technologies. **(actually, this trick is for front-End beginners)**.
 
 
 <!-- SCREEN SHOT -->
