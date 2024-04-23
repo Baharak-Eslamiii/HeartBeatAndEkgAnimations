@@ -66,7 +66,7 @@ This project features three interactive animations that simulate the heart beat,
 
 ### 🌐 Live Demo
 
-  - [View Demo](http:link "Live View")
+  - [View Demo](https://baharak-eslamiii.github.io/HeartBeatAndEkgAnimations/)
   
   
 <!-- DEVELOPMENT INFORMATION -->
